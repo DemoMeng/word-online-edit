@@ -1,0 +1,75 @@
+server:
+  port: 6088
+
+spring:
+  profiles:
+    active: dev
+
+---
+#配置文件名称
+spring:
+  config:
+    activate:
+      on-profile: dev
+  #数据源配置
+  datasource:
+    password: xxx
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: xxxx
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: xxx
+  #时区时差问题
+  jackson:
+    time-zone: GMT+8
+mybatis-plus:
+  mapper-locations: classpath*:com/mqz/wps/online/work/web/mapper/*.xml
+  type-aliases-package: com.mqz.wps.online.work.web.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logging:
+  config: classpath:logback.xml
+
+#wps回调的域名地址 (就是本项目需要部署到的外网上，wps保存文档等会回调项目接口)
+server:
+  domain: http://xxxx.xxx.cn
+
+# wps edit
+wps:
+  domain: https://wwo.wps.cn/office/
+  appid: you appid
+  appsecret: you appsecret
+  # wps convert
+  convert:
+    appid: you appid
+    appsecret: you appsecret
+    convert: https://dhs.open.wps.cn/pre/v1/convert
+    query: https://dhs.open.wps.cn/pre/v1/query
+
+
+#上传文档的大小，位置
+upload:
+  path: /var/local/document/
+  maxFileSize: 100
+  maxRequestSize: 200
+  file-location: oss
+
+oss:
+  file_url_prefix: xxxx
+  bucket_name: xxx
+  disk_name: online
+  region_id: xxx
+  endpoint: xxx
+  access_key: xxxx
+  access_secret: xxxx
+
+swagger:
+  enable: true
+
+---
+#配置文件名称
+spring:
+  config:
+    activate:
+      on-profile: prod
+

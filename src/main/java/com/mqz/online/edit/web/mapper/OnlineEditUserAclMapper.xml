@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mqz.online.edit.web.mapper.OnlineEditUserAclMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mqz.online.edit.web.entity.OnlineEditUserAcl">
+        <id column="id" property="id" />
+        <result column="user_id" property="userId" />
+        <result column="file_id" property="fileId" />
+        <result column="permission" property="permission" />
+        <result column="re_name" property="reName" />
+        <result column="history" property="history" />
+        <result column="copy" property="copy" />
+        <result column="export" property="export" />
+        <result column="print" property="print" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_id, file_id, permission, re_name, history, copy, export, print
+    </sql>
+
+</mapper>
