@@ -120,10 +120,10 @@ public class Generator {
 
 //    public static void main(String[] args) {
 //        /**数据库连接信息-manage*/
-//        String manage_url = "jdbc:mysql://rdsv45k6542skme03476.mysql.rds.aliyuncs.com:3306/online_edit?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+//        String manage_url = "jdbc:mysql://192.168.2.11:3306/online_edit?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 //        String manage_driverName = "com.mysql.cj.jdbc.Driver";
-//        String manage_userName = "hlw197";
-//        String manage_password = "HuLuWa110";
+//        String manage_userName = "197";
+//        String manage_password = "110";
 //
 //        String authorName = "mqz";
 //        //模块名分为 open 和 manage ，open针对开放平台的后台， manage 针对4.0的后台
